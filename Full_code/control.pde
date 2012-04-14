@@ -68,13 +68,13 @@ Exercise 2: Light-triggered robot.
 //    /******  Moves backward if light is blocked  ******/
 //    if(            ){
 //        /* Set direction of motor 1 and 2 */
-
+//
 //        /* Set speed of motor 1 and 2 */
-
+//
 //    }
 //    
 //    /* Wait 0.1s */
-
+//
 //}
 
 /******* 
@@ -90,7 +90,7 @@ Exercise 3: Line follower: follows a line between the two sensors.
 //    /* If sensor 1 is over a line */
 //    if(         ){
 //        /* Turn motor 1 off */
-
+//
 //    }
 //    else {
 //        /* Turn motor 1 on */
