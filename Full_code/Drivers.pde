@@ -46,15 +46,15 @@ void backward(int motor){
         digitalWrite(M2, LOW);
     }
 }
-/* Returns true if there is more light than turn on time by LIGHT_DIFFERENCE. 
+/* Returns true if there is less light than turn on time by LIGHT_DIFFERENCE. 
 Assumes photoresistor on top, so voltage goes down with more light. */
-boolean moreLight(){
+boolean lessLight(){
     Serial.println(startLightValue - analogRead(LIGHT_SENSOR));
     return (startLightValue - analogRead(LIGHT_SENSOR) > LIGHT_DIFFERENCE);
 }
-/* Returns true if there is less light than turn on time by LIGHT_DIFFERENCE. 
+/* Returns true if there is more light than turn on time by LIGHT_DIFFERENCE. 
 Assumes photoresistor on top, so voltage goes down with more light.*/
-boolean lessLight(){
+boolean moreLight(){
     return (analogRead(LIGHT_SENSOR) - startLightValue > LIGHT_DIFFERENCE);
 }
 /* False if input invalid. */
@@ -96,4 +96,13 @@ boolean line(int sensorNum){
     else if(sensorNum == 2){
         return overLine(QRE2);
     }
+}
+/* Enables heartbeat over LEDs */
+void enableHeartbeat(){
+    heartbeatEnable = true;
+}
+/* Disable heartbeat from LEDs */
+void disableHeartbeat(){
+    heartbeatEnable = false;
+    digitalWrite(LED1_PIN, LOW);
 }
