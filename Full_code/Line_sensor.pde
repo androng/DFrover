@@ -1,5 +1,5 @@
 boolean overLine(unsigned char sensorPin){
-    return readQD(sensorPin) > 2000;
+    return readQD(sensorPin) > 500;
 }
 /* Reads QRE Line sensor and returns the amount of time it took to 
 discharge the capacitor */
