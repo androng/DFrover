@@ -1,4 +1,4 @@
-#include <MsTimer2.h>
+
 
 const unsigned char E1 = 6; //M1 Speed Control 
 const unsigned char E2 = 5; //M2 Speed Control 
@@ -12,6 +12,9 @@ const unsigned char MEDIUM_SPEED = 180;
 
 int startLightValue = 0;
 boolean heartbeatEnable = false;
+
+unsigned long lastheartbeat = 0;
+const unsigned long HEARTBEATPERIOD = 13; 
 
 void setup(){
     Serial.begin(9600);
@@ -36,11 +39,15 @@ void setup(){
     }
     startLightValue /= i;
     
-    MsTimer2::set(13, heartbeat); 
-    MsTimer2::start();
 }
 void loop(){
     control();
+    
+    if(heartbeatEnable && (millis() - lastheartbeat > HEARTBEATPERIOD)){
+        heartbeat();
+      
+        lastheartbeat = millis();
+    }
 }
 void heartbeat(){
     if(heartbeatEnable){
