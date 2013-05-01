@@ -7,5 +7,9 @@ Instructions:
 
 -For use with college students: The "drivers" tab is where all of the functions in "List of functions.pdf" are. You may wish to eliminate or append this file.  
 
+Extra:
+-There is a "heartbeat enable" function. Connect pin 5 to the LED_SEL jumper to see the lights dim up and down. 
+-The code will error check if a scout inputs an invalid command like "setSpeed(280)" because the max value is 255. It will show up in the serial monitor. 
+
 License
 -MIT License
