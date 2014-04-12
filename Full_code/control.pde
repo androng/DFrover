@@ -110,5 +110,33 @@ Exercise 3: Line follower: follows a line between the two sensors.
 //    /* Wait 0.1s */
 //
 //}
+/******* 
+Exercise 4: Brightness control: fades LEDs using while loop
 
-
+Requires wire from pin 3 to LED jumper in the top left corner
+of PCB
+*********/
+//void control(){
+//    int brightness = 0; 
+//    
+//    /* Write a while loop that counts up to 127   */
+//    while(   ){
+//        /* analogWrite "brightness" to the LED */
+//        analogWrite(3, );
+//        /* Add one to brightness */
+//
+//        /* Delay 10ms */
+//
+//    }
+//    
+//    /* Write a while loop that counts down to 0 */
+//    while(  ){
+//        /* analogWrite "brightness" to the LED */
+//        analogWrite(3, );
+//        /* Subtract one from brightness */
+//
+//        /* Delay 10ms */
+//
+//    }
+//    
+//}
