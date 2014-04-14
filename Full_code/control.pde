@@ -20,6 +20,9 @@ void control(){
     /* Do nothing for 2 seconds. */
     
     
+    /* You can compile and run here */
+    /* How do you make the robot turn? */
+    
     /******  Move forward and turn left for 2 seconds  ******/
     /* Turn both motors off */
     
